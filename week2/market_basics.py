@@ -4,7 +4,9 @@
 def calculate_total(price, quantity):
     # TODO 1: reject a non-positive quantity with ValueError.
     # TODO 2: return price * quantity.
-    raise NotImplementedError('Complete calculate_total during Meeting 1.')
+    if quantity < 0:
+        raise ValueError("Type positive value for the quantity")
+    return price * quantity
 
 
 if __name__ == '__main__':

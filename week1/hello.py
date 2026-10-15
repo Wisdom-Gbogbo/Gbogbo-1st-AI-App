@@ -10,7 +10,7 @@ Run it with:   python week1/hello.py
 print("Good evening, everyone!")
 
 # TODO: create a variable with your name, and use it in a message
-name = "Shadrack"
+name = "Wisdom"
 
 # TODO: 
 message = "Good evening, I am "

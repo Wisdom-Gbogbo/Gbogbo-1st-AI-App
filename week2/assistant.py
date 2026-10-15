@@ -2,10 +2,15 @@
 from coursekit.ai import reply, AIError
 from coursekit.market import quote, receipt
 
-
 def ask_assistant(question):
     # TODO: reject blank input; build a list with one user message.
+    if not question.strip():
+        raise ValueError("Type a message")
+    message = [{"role": "user",  "content": question}]
+    
     # TODO: call reply(messages, instructions), then return its text.
+    text = reply(message, instructions=None)
+    return text
     # Demo mode is the default: it does not call AI.
     raise NotImplementedError('Complete ask_assistant in Meeting 2.')
 
